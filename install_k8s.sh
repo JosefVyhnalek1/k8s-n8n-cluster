@@ -2,6 +2,7 @@
 # Based on: 
 # - https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 # - https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+# - https://medium.com/@sirtcp/deploying-a-three-node-kubernetes-cluster-on-debian-12-with-kubeadm-and-rook-ceph-for-persistent-eb080f31d3fc
 
 sudo swapoff -a
 
@@ -22,6 +23,7 @@ EOF
 sudo sysctl --system
 
 # Install containerd
+# ref: https://docs.docker.com/engine/install/debian/
 # Add Docker's official GPG key:
 sudo apt update
 sudo apt install ca-certificates curl
