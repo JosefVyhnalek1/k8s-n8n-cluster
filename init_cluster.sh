@@ -2,7 +2,6 @@
 # (optional) remove old config
 # sudo kubeadm reset
 
-
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 
 mkdir -p $HOME/.kube

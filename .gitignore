@@ -1,0 +1,5 @@
+/test-app
+/app
+node_modules
+dist
+.env
