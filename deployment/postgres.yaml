@@ -48,7 +48,7 @@ spec:
         app: postgres
     spec:
       nodeSelector:
-        kubernetes.io/hostname: vyhnajos-01 //we want to run database always on same node
+        kubernetes.io/hostname: vyhnajos-01 #we want to run database always on same node
       containers:
         - name: postgres
           image: postgres:16
