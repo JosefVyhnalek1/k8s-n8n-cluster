@@ -22,6 +22,8 @@ spec:
               value: "false"
             - name: N8N_MODE
               value: "queue"          # Zapne Queue Mode
+            - name: N8N_TASKS_EVALUATOR_MODE
+              value: "external"
             - name: QUEUE_BULL_REDIS_HOST
               value: "redis"          # Adresa naší Redis Service
             - name: QUEUE_BULL_REDIS_PORT
