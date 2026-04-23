@@ -41,6 +41,10 @@ spec:
               value: "admin"
             - name: DB_POSTGRESDB_PASSWORD
               value: "v6nmjHaYGaIi2FVo"
+            - name: N8N_DISABLE_PRODUCTION_MAIN_PROCESS_TERMINATION
+              value: "true"
+            - name: N8N_SKIP_WEBHOOK_DEREGISTRATION_ON_TERMINATION
+              value: "true"
           ports:
             - containerPort: 5678
 ---
