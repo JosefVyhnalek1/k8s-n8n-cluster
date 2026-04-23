@@ -9,3 +9,7 @@
 ``` kubectl get deployment ``` - deployment says what should run - if you want to stop pod proper way to do it is shut down deployment
 
 ``` kubectl delete <deployment name > ```
+
+``` kubectl apply -f <deployment> ``` - apply deployment from file
+
+correctly we should call deployment manifest, deployment is part in manifest with pods
