@@ -18,6 +18,8 @@ spec:
           env:
             - name: N8N_SECURE_COOKIE
               value: "false"
+            - name: N8N_ENCRYPTION_KEY
+              value: "AdubH1SdjCOQerXr"
             - name: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
               value: "false"
             - name: N8N_MODE
