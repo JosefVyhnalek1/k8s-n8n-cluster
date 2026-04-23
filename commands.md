@@ -13,3 +13,7 @@
 ``` kubectl apply -f <deployment> ``` - apply deployment from file
 
 correctly we should call deployment manifest, deployment is part in manifest with pods
+
+``` kubectl  logs <pod name> ```
+
+``` kubectl describe <pod name> ``` - get info about pod while it is still creating

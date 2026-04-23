@@ -16,6 +16,8 @@ spec:
         - name: n8n
           image: n8nio/n8n:latest
           env:
+            - name: N8N_SECURE_COOKIE
+              value: "false"
             - name: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
               value: "false"
             - name: N8N_MODE
