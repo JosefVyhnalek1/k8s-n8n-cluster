@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: n8n
+  template:
+    metadata:
+      labels:
+        app: n8n
+    spec:
+      containers:
+        - name: n8n
+          image: n8nio/n8n:latest
+          env:
+            - name: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+              value: "false"
+            - name: N8N_MODE
+              value: "queue"          # Zapne Queue Mode
+            - name: QUEUE_BULL_REDIS_HOST
+              value: "redis"          # Adresa naší Redis Service
+            - name: QUEUE_BULL_REDIS_PORT
+              value: "6379"
+            - name: QUEUE_BULL_REDIS_PASSWORD
+              value: "oX2uX9HGlb8mSj1H"
+            - name: DB_TYPE
+              value: "postgresdb"
+            - name: DB_POSTGRESDB_DATABASE
+              value: "n8n"
+            - name: DB_POSTGRESDB_HOST
+              value: "postgres"
+            - name: DB_POSTGRESDB_USER
+              value: "admin"
+            - name: DB_POSTGRESDB_PASSWORD
+              value: "v6nmjHaYGaIi2FVo"
+          ports:
+            - containerPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: n8n
+spec:
+  type: NodePort # i want to expose outside k8s network
+  selector:
+    app: n8n
+  ports:
+    - port: 5678
+      targetPort: 5678 # this should work same without this line
+      nodePort: 30000
