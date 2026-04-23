@@ -30,8 +30,6 @@ spec:
               value: "redis"          # Adresa naší Redis Service
             - name: QUEUE_BULL_REDIS_PORT
               value: "6379"
-            - name: QUEUE_BULL_REDIS_PASSWORD
-              value: "oX2uX9HGlb8mSj1H"
             - name: DB_TYPE
               value: "postgresdb"
             - name: DB_POSTGRESDB_DATABASE
