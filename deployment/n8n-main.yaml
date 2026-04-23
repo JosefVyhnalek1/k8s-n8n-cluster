@@ -12,6 +12,7 @@ spec:
       labels:
         app: n8n
     spec:
+      enableServiceLinks: false
       containers:
         - name: n8n
           image: n8nio/n8n:latest
